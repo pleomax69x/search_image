@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import s from "./Searchbar.module.css";
 
 const Searchbar = ({ onSubmit }) => {
@@ -12,7 +13,7 @@ const Searchbar = ({ onSubmit }) => {
     e.preventDefault();
 
     if (query.trim() === "") {
-      // toast.error("Enter word");
+      toast.error("Enter word");
       return;
     }
     onSubmit(query);

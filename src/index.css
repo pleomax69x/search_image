@@ -117,3 +117,8 @@ img {
 .Button:focus {
   background-color: #303f9f;
 }
+
+.loaderDiv {
+  display: flex;
+  justify-content: center;
+}
