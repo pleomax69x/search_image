@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import getImg from "../api/api-service";
 import ImageGalleryItem from "./ImageGalleryItem";
 import Button from "./Button";
@@ -51,7 +51,7 @@ const ImageGallery = ({ query }) => {
     setStatus(Status.PENDING);
 
     // axios + tryCatch
-    getImg(query, page)
+    getImg(query)
       .then((data) => {
         if (data.length === 0) {
           setStatus(Status.IDLE);
